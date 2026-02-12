@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chamar API</title>
+</head>
+<body>
+
+  <h1>Teste API</h1>
+  <button onclick="chamarAPI()">Chamar API</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    async function chamarAPI() {
+      const response = await fetch("http://URL_DA_API/api/alo");
+      const data = await response.json();
+      document.getElementById("resultado").innerText = data.mensagem;
+    }
+  </script>
+
+</body>
+</html>
